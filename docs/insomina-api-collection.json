@@ -1,0 +1,686 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2023-02-14T12:12:19.008Z",
+  "__export_source": "insomnia.desktop.app:v2022.4.2",
+  "resources": [
+    {
+      "_id": "req_619b8e4e2d064ca9b2a80883afd8657b",
+      "parentId": "wrk_90298b576b434edab5ff6742e916531d",
+      "modified": 1676376702088,
+      "created": 1676336263677,
+      "url": "{{ _.url }}/healthcheck",
+      "name": "healthcheck",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1676376660844,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_90298b576b434edab5ff6742e916531d",
+      "parentId": null,
+      "modified": 1676334927154,
+      "created": 1676334382651,
+      "name": "finance-api-expressjs",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_9e004f6940d144f08580610f31e2a972",
+      "parentId": "fld_9cb9f5c26b324b31b76a26aa2edf6a0b",
+      "modified": 1676376662834,
+      "created": 1676374959137,
+      "url": "{{ _.url }}/deposit/",
+      "name": "post customer deposit 200",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"cpf\": \"{{ _.valid_cpf }}\",\n\t\"description\": \"lorem ipsum\",\n\t\"amount\": 100\n}\n"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_dea9c90b86ab4c09bd0dc4f2987fc40b"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1675901556636.0625,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_9cb9f5c26b324b31b76a26aa2edf6a0b",
+      "parentId": "wrk_90298b576b434edab5ff6742e916531d",
+      "modified": 1676376660794,
+      "created": 1676376660794,
+      "name": "deposit",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1676376660794,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_e688c0c0be8e4b92b590cb63e2d19487",
+      "parentId": "fld_14cc58bedc634df292b392a1bfde832b",
+      "modified": 1676376682822,
+      "created": 1676375127340,
+      "url": "{{ _.url }}/withdraw/",
+      "name": "post customer withdraw 200",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"cpf\": \"{{ _.valid_cpf }}\",\n\t\"amount\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_dea9c90b86ab4c09bd0dc4f2987fc40b"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1675894575514.0312,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_14cc58bedc634df292b392a1bfde832b",
+      "parentId": "wrk_90298b576b434edab5ff6742e916531d",
+      "modified": 1676376656145,
+      "created": 1676376656145,
+      "name": "withdraw",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1676376656145,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_28186650a9ee4ad1a2d8b74593837e34",
+      "parentId": "fld_14cc58bedc634df292b392a1bfde832b",
+      "modified": 1676376684574,
+      "created": 1676376490481,
+      "url": "{{ _.url }}/withdraw/",
+      "name": "post customer withdraw 400",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"cpf\": \"{{ _.valid_cpf }}\",\n\t\"amount\": 1000000000000\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_dea9c90b86ab4c09bd0dc4f2987fc40b"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1675894575464.0312,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_c486510e6df840198c0373845cc525cb",
+      "parentId": "fld_14cc58bedc634df292b392a1bfde832b",
+      "modified": 1676376685999,
+      "created": 1676376494211,
+      "url": "{{ _.url }}/withdraw/",
+      "name": "post customer withdraw 404",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"cpf\": \"12301230\",\n\t\"amount\": 1000000000000\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_dea9c90b86ab4c09bd0dc4f2987fc40b"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1675894575414.0312,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_0e0c601296e043d89c5568883a0ce659",
+      "parentId": "fld_962b240cf65040e891aee91f9d94ec10",
+      "modified": 1676376673096,
+      "created": 1676374848176,
+      "url": "{{ _.url }}/statement/",
+      "name": "get customer statement 200",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"cpf\": \"{{ _.valid_cpf }}\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_dea9c90b86ab4c09bd0dc4f2987fc40b"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1675901556586.0625,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_962b240cf65040e891aee91f9d94ec10",
+      "parentId": "wrk_90298b576b434edab5ff6742e916531d",
+      "modified": 1676376653148,
+      "created": 1676376653148,
+      "name": "statement",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1676376653148,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_3a8773640165476383c620a455df4c21",
+      "parentId": "fld_962b240cf65040e891aee91f9d94ec10",
+      "modified": 1676376675132,
+      "created": 1676376474201,
+      "url": "{{ _.url }}/statement/",
+      "name": "get customer statement 404",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"cpf\": \"12345678901\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_dea9c90b86ab4c09bd0dc4f2987fc40b"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1675901556536.0625,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_51d2dd61169c42b5a1e37108146eacb7",
+      "parentId": "fld_962b240cf65040e891aee91f9d94ec10",
+      "modified": 1676376676900,
+      "created": 1676375874665,
+      "url": "{{ _.url }}/statement/date",
+      "name": "get customer statement by date 200",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"cpf\": \"{{ _.valid_cpf }}\",\n\t\"date\": \"2023-02-12\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_dea9c90b86ab4c09bd0dc4f2987fc40b"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1675901556486.0625,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_e302106b6320451db16a2feb27721d93",
+      "parentId": "fld_962b240cf65040e891aee91f9d94ec10",
+      "modified": 1676376680080,
+      "created": 1676376446031,
+      "url": "{{ _.url }}/statement/date",
+      "name": "get customer statement by date 404",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"cpf\": \"{{ _.valid_cpf }}\",\n\t\"date\": \"should warn data format\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_dea9c90b86ab4c09bd0dc4f2987fc40b"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1675901556436.0625,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_5f8e37d52ff749d18584e99ebec8773e",
+      "parentId": "fld_ae6a731b76f04371b26acdedcde88edf",
+      "modified": 1676375067363,
+      "created": 1676368972754,
+      "url": "{{ _.url }}/accounts",
+      "name": "get customers",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": ""
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_dea9c90b86ab4c09bd0dc4f2987fc40b"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1676334386252,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_ae6a731b76f04371b26acdedcde88edf",
+      "parentId": "wrk_90298b576b434edab5ff6742e916531d",
+      "modified": 1676375089353,
+      "created": 1676375063414,
+      "name": "account",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1676375063414,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_518e2fbd14eb42328c146c34db4d16c0",
+      "parentId": "fld_ae6a731b76f04371b26acdedcde88edf",
+      "modified": 1676375068512,
+      "created": 1676334386252,
+      "url": "",
+      "name": "get customer account 200",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"cpf\": \"{{ _.valid_cpf }}\"\n}\n"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_dea9c90b86ab4c09bd0dc4f2987fc40b"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1676334386202,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d09b2aae4f1f4440b7c243cac28d9337",
+      "parentId": "fld_ae6a731b76f04371b26acdedcde88edf",
+      "modified": 1676375070397,
+      "created": 1676335425544,
+      "url": "{{ _.url }}/account",
+      "name": "get customer account 404",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"cpf\": \"0000000000\"\n}\n"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_d3637fd4bbc348e1bd8902cefe128c48"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1676334386152,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d768fb850c9b483c969e5bb1551ff755",
+      "parentId": "fld_ae6a731b76f04371b26acdedcde88edf",
+      "modified": 1676375071077,
+      "created": 1676335438597,
+      "url": "{{ _.url }}/account",
+      "name": "update customer account 201",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"cpf\": \"{{ _.valid_cpf }}\",\n\t\"name\": \"lorem ipsum\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_24365afcc6e44b94b34e59e63538f758"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1676334386102,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_69d551913d344d8cb7cbd5767efb14ee",
+      "parentId": "fld_ae6a731b76f04371b26acdedcde88edf",
+      "modified": 1676375077144,
+      "created": 1676335781929,
+      "url": "{{ _.url }}/account",
+      "name": "update customer account 404",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"cpf\": \"000000000000000\",\n\t\"name\": \"aaaaaaaaaaa\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_24365afcc6e44b94b34e59e63538f758"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1676334386089.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_c08fc0f3c4254d1c83c0812d68893882",
+      "parentId": "fld_ae6a731b76f04371b26acdedcde88edf",
+      "modified": 1676375073239,
+      "created": 1676368667924,
+      "url": "{{ _.url }}/account",
+      "name": "create customer account 200",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"new user\",\n\t\"cpf\": \"12345678901\"\n}\n"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_dea9c90b86ab4c09bd0dc4f2987fc40b"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1676334386077,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_eaf77bff4bef456498cfa26cb372ff9e",
+      "parentId": "fld_ae6a731b76f04371b26acdedcde88edf",
+      "modified": 1676375073999,
+      "created": 1676373277285,
+      "url": "{{ _.url }}/account",
+      "name": "create customer account 404",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": null,\n\t\"cpf\": \"qwerty\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_dea9c90b86ab4c09bd0dc4f2987fc40b"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1676334386002,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_e2678acbf13d46668dea0ab515de89bc",
+      "parentId": "fld_ae6a731b76f04371b26acdedcde88edf",
+      "modified": 1676375078892,
+      "created": 1676373112528,
+      "url": "{{ _.url }}/account",
+      "name": "delete customer account 200",
+      "description": "",
+      "method": "DELETE",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"cpf\": \"{{ _.valid_cpf }}\"\n}\n"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_dea9c90b86ab4c09bd0dc4f2987fc40b"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1676334385952,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_1e463b0b37be47adbfb7754e577a3a10",
+      "parentId": "fld_ae6a731b76f04371b26acdedcde88edf",
+      "modified": 1676375079708,
+      "created": 1676373260656,
+      "url": "{{ _.url }}/account",
+      "name": "delete customer account 404",
+      "description": "",
+      "method": "DELETE",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"cpf\": \"123456789012\"\n}\n"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_dea9c90b86ab4c09bd0dc4f2987fc40b"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1676334385902,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_be689deb39d337e00726069940aa3ac21ba119b8",
+      "parentId": "wrk_90298b576b434edab5ff6742e916531d",
+      "modified": 1676335316693,
+      "created": 1676334382658,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": {},
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1676334382658,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_be689deb39d337e00726069940aa3ac21ba119b8",
+      "parentId": "wrk_90298b576b434edab5ff6742e916531d",
+      "modified": 1676334382660,
+      "created": 1676334382660,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_a6dd88f79526407b97c6d314a64ca597",
+      "parentId": "wrk_90298b576b434edab5ff6742e916531d",
+      "modified": 1676334382653,
+      "created": 1676334382653,
+      "fileName": "My Collection",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    },
+    {
+      "_id": "env_aaac5b6f8d62412692482e3d122cbebe",
+      "parentId": "env_be689deb39d337e00726069940aa3ac21ba119b8",
+      "modified": 1676335346571,
+      "created": 1676335319117,
+      "name": "finance-api",
+      "data": {
+        "url": "http://localhost:8888",
+        "valid_cpf": "30030030030"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "url",
+          "valid_cpf"
+        ]
+      },
+      "color": null,
+      "isPrivate": true,
+      "metaSortKey": 1676335319117,
+      "_type": "environment"
+    }
+  ]
+}

@@ -1,17 +1,12 @@
 const express = require('express')
-const { request, response } = require('express')
-const { v4: uuidv4 } = require('uuid')
+const routerController = require('./routes/index')
 
-const app = express()
+const api = express()
 
-app.use(express.json())
+api.use(express.json())
+api.use(express.urlencoded({ extended: true }))
 
-app.get('/', (_req, res) => {
-  return res.json({
-    hello: 'world'
-  })
-})
+api.use(routerController)
 
-app.listen(8888, () => {
-  console.log('Server started at: http://localhost:8888')
-})
+api.listen(8888)
+console.log('Server started at: http://localhost:8888')

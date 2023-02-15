@@ -1,0 +1,33 @@
+[
+  {
+    "id": "693af934-32b2-5ad5-94ae-ae16602f870c",
+    "name": "Sadie Brown",
+    "cpf": "30030030030",
+    "statement": [
+      {
+        "type": "credit",
+        "description": "lorem ipsum",
+        "amount": 100,
+        "created_at": "2023-02-11T11:58:41.382Z"
+      },
+      {
+        "type": "credit",
+        "description": "lorem ipsum",
+        "amount": 150,
+        "created_at": "2023-02-12T11:58:41.513Z"
+      },
+      {
+        "type": "debit",
+        "description": "lorem ipsum",
+        "amount": 200,
+        "created_at": "2023-02-13T11:58:41.713Z"
+      }
+    ]
+  },
+  {
+    "id": "2bbef008-6778-5266-a78c-0e3b27b1e5c4",
+    "name": "Arthur Santos",
+    "cpf": "1234567890",
+    "statement": []
+  }
+]
