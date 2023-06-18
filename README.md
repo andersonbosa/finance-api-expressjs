@@ -1,7 +1,7 @@
 # finance-api-expressjs
 
 
-## Try:
+## API Collection
 
 [![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Finance%20API&uri=./docs/insomina-api-collection.json)
 
